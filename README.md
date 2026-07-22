@@ -104,7 +104,7 @@ Everything else from the production route list (`/internal/rag`, `/internal/extr
 
 ## 3. Response Generation — From Query to Answer
 
-![alt text](image.png)
+![retrieval pipeline](retrieval_pipeline_flow.svg)
 
 ```
 User opens a conversation
@@ -158,7 +158,7 @@ Web Search Agent queries live marketplaces       │
 
 **Why `diff()` matters here:** the ranking decision is made deterministically in code before any LLM call. The Explanation LLM never re-decides which product is best — it only narrates a decision that already happened, using a pre-computed attribute comparison (`diff()`) as its only allowed input. This is what keeps the explanation grounded rather than hallucinated (see §5 for how this is verified).
 
-![alt text](image-1.png)
+![diff_explaination_flow](diff_explanation_flow.svg)
 
 ---
 
